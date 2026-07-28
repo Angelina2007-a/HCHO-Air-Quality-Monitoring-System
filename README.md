@@ -20,6 +20,7 @@ The dashboard provides:
 ---
 ## 📸 Project Screenshots
 
+
 ### 🔐 Login Page
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/893f8f1f-74a4-49f8-ae36-c5611da4310a" />
 
@@ -35,7 +36,8 @@ The dashboard provides:
 
 ### 📈 Live HCHO Graph
 
-![Live Graph](assets/live-graph.png)
+<img width="1901" height="796" alt="Screenshot 2026-07-28 143444" src="https://github.com/user-attachments/assets/1c2b22ef-1618-4c11-9ee6-b9412b6f3cfa" />
+
 
 ---
 
@@ -48,8 +50,10 @@ The dashboard provides:
 
 ### 🔌 Hardware Setup
 
-![Hardware Setup](assets/hardware-setup.jpg)
+<img width="1280" height="720" alt="WhatsApp Image 2026-07-28 at 2 03 15 PM" src="https://github.com/user-attachments/assets/c3828d90-01f0-4be6-9547-32c67ed25477" />
 
+## CONNECTION DIAGRAM
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e02166b3-2ebd-480b-b694-e1292cb176aa" />
 ---
 ## 🛠 Tech Stack
 
