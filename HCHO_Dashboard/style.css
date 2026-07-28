@@ -1,0 +1,924 @@
+/* ===============================
+   GLOBAL SETTINGS
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+  background-image: url("images/HCHO-Picsart-AiImageEnhancer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+
+
+
+/* ===============================
+        HEADER
+================================ */
+
+
+header{
+
+    width:100%;
+    padding:18px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(246, 241, 241, 0.24);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(0,0,0,0.07);
+
+    box-shadow:0 2px 12px rgba(0,0,0,0.04);
+
+}
+
+
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+}
+
+
+.logo i{
+
+    font-size:30px;
+    color:#355b93be;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(2,132,199,0.1);
+    border-radius:7px;
+
+}
+
+
+.logo h1{
+
+    font-size:21px;
+    font-weight:600;
+    color:#2a577e;
+    letter-spacing:0.2px;
+
+}
+
+
+
+
+/* HEADER RIGHT CLUSTER
+   (date/time -> divider -> user -> logout,
+   flush against the top-right corner) */
+
+
+.header-right{
+
+    display:flex;
+    align-items:center;
+    gap:22px;
+
+}
+
+
+
+.header-divider{
+
+    width:1px;
+    height:32px;
+
+    background:rgba(0,0,0,0.1);
+
+}
+
+
+
+
+/* DATE TIME */
+
+
+.date-time{
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    font-size:13px;
+    line-height:1.5;
+
+    color:#64748b;
+
+}
+
+
+
+/* USER SECTION */
+
+
+.user-section{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+
+.user-icon{
+
+    font-size:30px;
+    color:#536e93;
+
+}
+
+
+#userPhone{
+
+    font-size:14px;
+    font-weight:500;
+    color:#334155;
+
+}
+
+
+
+
+#logoutBtn{
+
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-size:14px;
+    font-weight:500;
+
+    transition:0.25s;
+
+    box-shadow:0 4px 10px rgba(239,68,68,0.25);
+
+}
+
+
+
+#logoutBtn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-0.5px);
+
+}
+
+
+
+/* ===============================
+        MAIN
+================================ */
+
+
+main{
+
+    padding:40px;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+}
+
+
+
+/* ===============================
+        SENSOR CARDS
+================================ */
+
+
+.cards{
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+
+    gap:25px;
+
+}
+
+
+
+
+.card{
+
+    position:relative;
+
+    background:rgba(250, 245, 245, 0.879);
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(0,0,0,0.05);
+
+    box-shadow:
+    0 8px 24px rgba(15,23,42,0.06);
+
+
+    transition:0.25s;
+
+
+}
+
+
+
+.card:hover{
+
+    transform:scale(1.025);
+
+    box-shadow:0 14px 30px rgba(15,23,42,0.1);
+
+}
+
+
+
+.card-icon{
+
+    width:44px;
+    height:44px;
+
+    border-radius:8px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+
+    margin-bottom:16px;
+
+}
+
+
+.icon-blue{
+
+    background:rgba(1, 75, 112, 0.1);
+    color:#2e576c;
+
+}
+
+
+.icon-green{
+
+    background:rgba(27, 159, 75, 0.12);
+    color:#127135;
+
+}
+
+
+.icon-amber{
+
+    background:rgba(142, 94, 12, 0.14);
+    color:#9b5608;
+
+}
+
+
+
+.card h2{
+
+    font-size:14px;
+    font-weight:500;
+
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+
+    color:#64748b;
+
+    margin-bottom:16px;
+
+}
+
+
+
+
+
+.value{
+
+
+    display:flex;
+
+    align-items:baseline;
+
+    gap:8px;
+
+
+}
+
+
+.value span{
+
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#34497a;
+
+
+}
+
+
+
+.value small{
+
+    font-size:16px;
+    font-weight:500;
+
+    color:#94a3b8;
+
+}
+
+
+.update span{
+
+    font-size:16px;
+    font-weight:500;
+
+    color:#0f172a;
+
+}
+
+
+
+
+
+/* ===============================
+        STATUS BOX
+================================ */
+
+
+#statusBox{
+
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+
+    text-align:center;
+
+
+    border-radius:50px;
+
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:0.5px;
+
+
+}
+
+
+
+
+
+.safe{
+
+
+    background:#1f8946;
+
+    color:white;
+
+
+}
+
+
+
+.moderate{
+
+
+    background:#a18516;
+
+    color:#1a2733;
+
+}
+
+
+
+.danger{
+
+
+    background:#922929;
+
+    color:white;
+
+}
+
+
+
+
+
+/* ===============================
+        CHART SECTION
+================================ */
+
+
+
+.chart-section{
+
+
+    margin-top:32px;
+
+
+    padding:30px;
+
+
+    background:rgba(255, 255, 255, 0.815);
+
+
+    border-radius:18px;
+
+    border:1px solid rgba(0,0,0,0.05);
+
+    box-shadow:0 8px 24px rgba(15,23,42,0.06);
+
+
+}
+
+
+
+.chart-section h2{
+
+
+    margin-bottom:24px;
+
+    font-size:17px;
+    font-weight:600;
+
+    color:#1a2733;
+
+}
+
+
+
+
+canvas{
+
+    max-height:400px;
+
+}
+
+
+
+
+
+/* ===============================
+        HISTORY TABLE
+================================ */
+
+
+
+.history{
+
+
+    margin-top:32px;
+
+
+    padding:30px;
+
+
+    background:rgba(255, 255, 255, 0.532);
+
+
+    border-radius:18px;
+
+    border:1px solid rgba(0,0,0,0.05);
+
+    box-shadow:0 8px 24px rgba(15,23,42,0.06);
+
+
+}
+
+
+
+.history h2{
+
+
+    margin-bottom:20px;
+
+    font-size:17px;
+    font-weight:600;
+
+    color:#1a2733;
+
+}
+
+
+
+
+table{
+
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+
+}
+
+
+
+th{
+
+
+    background:#283f75a8;
+
+    color:white;
+
+    padding:14px;
+
+    font-size:13px;
+    font-weight:500;
+
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+td{
+
+
+    padding:13px;
+
+    text-align:center;
+
+    color:#334155;
+
+    font-size:14px;
+
+    border-bottom:1px solid rgba(0,0,0,0.06);
+
+
+}
+
+
+
+
+
+tbody tr:hover{
+
+
+    background:rgba(10, 68, 97, 0.05);
+
+
+}
+
+
+
+
+/* ===============================
+        FOOTER
+================================ */
+
+
+footer{
+
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+/* ===============================
+        LOGIN PAGE
+================================ */
+
+
+.page-wrapper{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:40px 20px;
+
+}
+
+
+
+.login-box,
+.login-container{
+
+
+    width:380px;
+
+    max-width:90vw;
+
+    padding:40px;
+
+
+    background:rgba(207, 205, 205, 0);
+
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,0,0,0.08);
+
+
+    border-radius:30px;
+
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+
+
+    text-align:center;
+
+
+}
+
+
+
+.login-box h1,
+.login-container h1{
+
+
+    margin-bottom:8px;
+
+    color:#3e6285;
+
+}
+
+
+
+.login-box h3,
+.login-container h3{
+
+    color:#4a5a68;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.login-box input,
+.login-container input{
+
+
+    width:100%;
+
+
+    padding:14px;
+
+
+    margin:10px 0;
+
+
+    border:1px solid #cfd8e3;
+
+
+    outline:none;
+
+
+    border-radius:8px;
+
+
+    font-size:16px;
+
+    background:#f7f9fc;
+
+    color:#1a2733;
+
+
+}
+
+
+.login-box input:focus,
+.login-container input:focus{
+
+    border-color:#38bff8d1;
+
+}
+
+
+
+.login-box button,
+.login-container button{
+
+
+    width:100%;
+
+
+    padding:14px;
+
+
+    margin:10px 0;
+
+
+    border:none;
+
+
+    border-radius:8px;
+
+
+    background:#2f5181c7;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+
+}
+
+
+
+.login-box button:hover,
+.login-container button:hover{
+
+
+    background:#598fd1;
+
+
+}
+
+
+#message{
+
+    color:#d64545;
+
+    font-size:14px;
+
+    min-height:18px;
+
+}
+
+
+#recaptcha-container{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+/* ===============================
+        RESPONSIVE
+================================ */
+
+
+@media(max-width:900px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:16px;
+
+    text-align:center;
+
+}
+
+
+.header-right{
+
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+
+.date-time{
+
+    align-items:center;
+
+}
+
+
+
+main{
+
+    padding:20px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:450px){
+
+
+.login-box,
+.login-container{
+
+
+    width:90%;
+
+}
+
+
+
+.logo h1{
+
+    font-size:16px;
+
+}
+
+
+.header-right{
+
+    gap:14px;
+
+}
+
+
+.header-divider{
+
+    display:none;
+
+}
+
+
+
+}

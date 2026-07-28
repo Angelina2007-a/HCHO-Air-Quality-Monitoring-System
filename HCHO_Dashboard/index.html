@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HCHO Air Quality Monitoring</title>
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-wind"></i>
+
+<h1>
+HCHO Air Quality Monitoring System
+</h1>
+
+</div>
+
+
+
+<div class="header-right">
+
+
+<div class="date-time">
+
+<span id="currentDate"></span>
+
+<span id="currentTime"></span>
+
+</div>
+
+
+<div class="header-divider"></div>
+
+
+<div class="user-section">
+
+<i class="fa-solid fa-circle-user user-icon"></i>
+
+<span id="userPhone">
+User
+</span>
+
+</div>
+
+
+<button id="logoutBtn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+
+</button>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- ================= MAIN ================= -->
+
+
+<main>
+
+
+
+<!-- CURRENT SENSOR CARDS -->
+
+
+<section class="cards">
+
+
+
+<div class="card">
+
+<div class="card-icon icon-blue">
+<i class="fa-solid fa-flask-vial"></i>
+</div>
+
+<h2>
+Current HCHO
+</h2>
+
+
+<div class="value">
+
+<span id="hchoValue">
+0.000
+</span>
+
+
+<small>
+ppm
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="card-icon icon-green">
+<i class="fa-solid fa-shield-heart"></i>
+</div>
+
+<h2>
+Air Quality Status
+</h2>
+
+
+<div id="statusBox" class="safe">
+
+SAFE
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="card-icon icon-amber">
+<i class="fa-regular fa-clock"></i>
+</div>
+
+<h2>
+Last Updated
+</h2>
+
+
+<div class="update">
+
+<span id="lastUpdate">
+
+Waiting...
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- LIVE GRAPH -->
+
+
+<section class="chart-section">
+
+
+<h2>
+Live HCHO Graph
+</h2>
+
+
+
+<canvas id="hchoChart"></canvas>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- HISTORY TABLE -->
+
+
+<section class="history">
+
+
+<h2>
+Recent Sensor Readings
+</h2>
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>
+Time
+</th>
+
+
+<th>
+HCHO (ppm)
+</th>
+
+
+<th>
+Status
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="historyTable">
+
+
+<!-- Firebase Data Will Load Here -->
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</section>
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<p>
+
+Developed using ESP8266 + Firebase Realtime Database + HTML/CSS/JavaScript
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+<!-- Firebase Dashboard Script -->
+
+<script type="module" src="script.js"></script>
+
+
+
+</body>
+
+
+</html>
