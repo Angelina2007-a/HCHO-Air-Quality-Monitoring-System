@@ -54,6 +54,7 @@ The dashboard provides:
 
 ## CONNECTION DIAGRAM
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e02166b3-2ebd-480b-b694-e1292cb176aa" />
+
 ---
 ## 🛠 Tech Stack
 
